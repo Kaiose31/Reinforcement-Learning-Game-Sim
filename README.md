@@ -11,7 +11,9 @@ Project Modules:
 # 2. RL
     DDPG 
     DQN 
-    Unity ML agents api 
+    Unity ML agents api   - DONE 
+  
+    
 
 
 
