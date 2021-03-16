@@ -117,7 +117,7 @@ MonoBehaviour:
   m_MinSize: {x: 908, y: 421}
   m_MaxSize: {x: 22003, y: 10021}
   vertical: 0
-  controlID: 2030
+  controlID: 758
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 421}
   m_MaxSize: {x: 4001, y: 8021}
   vertical: 1
-  controlID: 2031
+  controlID: 763
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -394,16 +394,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 881c2ff27e523dc429415dc235d1e722
   m_Gizmos: 1
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -6.3887196, y: 11.77852, z: 258.1911}
+    m_Target: {x: 9.239407, y: -2.2255745, z: 11.343424}
     speed: 2
-    m_Value: {x: -6.3887196, y: 11.77852, z: 258.1911}
+    m_Value: {x: 9.239407, y: -2.2255745, z: 11.343424}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -449,13 +449,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.008497376, y: 0.9800547, z: -0.19388567, w: 0.042955622}
+    m_Target: {x: 0.041656666, y: 0.75108784, z: -0.6571748, w: 0.047607325}
     speed: 2
-    m_Value: {x: 0.008497376, y: 0.9800547, z: -0.19388568, w: 0.042955622}
+    m_Value: {x: 0.041656666, y: 0.75108784, z: -0.6571748, w: 0.047607325}
   m_Size:
-    m_Target: 4.364342
+    m_Target: 20.360058
     speed: 2
-    m_Value: 4.364342
+    m_Value: 20.360058
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -509,9 +509,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c04b0000
-      m_LastClickedID: 19392
-      m_ExpandedIDs: 98e1ffff964b0000984b00009a4b00009c4b0000b44b0000c04b0000ce4b0000
+      m_SelectedIDs: 72340000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -574,7 +574,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Standard Assets/Vehicles/Car/Prefabs
+    - Packages/com.unity.ml-agents/Runtime/Policies
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -586,7 +586,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 26350000
     m_LastClickedID: 13606
-    m_ExpandedIDs: ffffffff000000000e3a0000103a0000123a0000143a0000163a0000183a00001a3a0000203a0000243a0000263a0000283a00002a3a00002c3a00004a480000
+    m_ExpandedIDs: ffffffff000000003e3b0000403b0000423b0000443b0000463b0000483b00004a3b00004c3b00004e3b0000503b0000523b0000543b0000563b0000583b00007e3b00003240000044400000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -611,10 +611,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 587}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000000e3a0000103a0000123a0000143a0000163a0000183a00001a3a0000203a0000243a0000263a0000283a00002a3a00002c3a00004a480000
+    m_ExpandedIDs: ffffffff000000003e3b0000403b0000423b0000443b0000463b0000483b00004a3b00004c3b00004e3b0000503b0000523b0000543b0000563b0000583b00007e3b00003240000044400000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -707,4 +707,4 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 761
+  m_LastVerticalScrollValue: 0
