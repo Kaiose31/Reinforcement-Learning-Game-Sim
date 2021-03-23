@@ -3,8 +3,8 @@
 Project Modules:
 
 # 1. Environment
-    Obstacle Course 
-    Steering and Torque data display
+    Obstacle Course + Checkpoints - DONE
+    Steering and Speed data display
     Refine
 
 
