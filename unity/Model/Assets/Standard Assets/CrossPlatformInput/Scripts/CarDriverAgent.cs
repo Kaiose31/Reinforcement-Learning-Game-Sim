@@ -42,14 +42,15 @@ public class CarDriverAgent : Agent
 
         //   trackCheckpoints.ResetCheckpoint(transform);
         carDriver.Move(0f, 0f, 0f, 0f);
-       //Set transform to spawnpos / reset checkpoint and set vel to 0.
+       //Set transform to spawnpos / reset checkpoint.
 
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {   //get obs from ray perception sensor.
         // float directionD = Vector3.Dot(transform.forward, checkpoint.transform.forward);
-        // sensor.AddObservation(directionD);
+        // sensor.AddObservation(directionD);\
+        
     }
 
 
@@ -63,7 +64,7 @@ public class CarDriverAgent : Agent
         {
             case 0: accel = 0f; break;
             case 1: accel = +1f; break;
-            case 2: accel = -1f; break;
+            case 2: accel = -1f; break; 
         }
         switch (actions.DiscreteActions[1])
         {
@@ -96,9 +97,11 @@ public class CarDriverAgent : Agent
 
     public void OnCollisionEnter(Collision collision)
     {
+        //Check if car collides with wall
         if (collision.gameObject.tag == "Obstacle")
         {
             AddReward(-0.5f);
+            
         }
 
     }
