@@ -8,7 +8,7 @@ public class CheckpointS : MonoBehaviour
     public TrackCheckpoints trackCheckpoints;
     public GameObject Chassis;
     public void Start() {
-        Chassis = GameObject.FindGameObjectWithTag("Car");
+        Chassis = GameObject.FindGameObjectWithTag("Player");
         
     }
 
