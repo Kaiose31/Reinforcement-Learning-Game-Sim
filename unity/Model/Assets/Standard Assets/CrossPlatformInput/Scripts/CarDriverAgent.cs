@@ -10,31 +10,32 @@ public class CarDriverAgent : Agent
 {
     // [SerializeField] private TrackCheckpoints trackCheckpoints;
     
-    public float xMinRange = -12.0f;
-    public float xMaxRange = -12.0f;
-    public float yMinRange = 0.0f;
-    public float yMaxRange = 0.0f;
-    public float zMinRange = 23.0f;
-    public float zMaxRange = 30.0f;
+    //public float xMinRange = -12.0f;
+    //public float xMaxRange = -12.0f;
+    //public float yMinRange = 0.0f;
+    //public float yMaxRange = 0.0f;
+    //public float zMinRange = 23.0f;
+    //public float zMaxRange = 30.0f;
 
-    public Transform target;
+    //public Transform target;
 
-    public GameObject[] spawnObjects; // what prefabs to spawn,here car.
+    //public GameObject[] spawnObjects; // what prefabs to spawn,here car.
 
     private CarController carDriver;
-    private GameObject[] Obstacle;
+    
+    GameObject  CarAgent;
+    //Rigidbody CarAgent;
+    //private void Awake()
+    //{
 
-    Rigidbody CarAgent;
-    private void Awake()
-    {
-        carDriver = GetComponent<CarController>();
-        Obstacle = GameObject.FindGameObjectsWithTag("Obstacle");
 
-    }
+
+    //}
 
     private void start()
     {
-        CarAgent = GetComponent<Rigidbody>();
+        CarAgent = GameObject.FindGameObjectWithTag("Player");
+        carDriver = GetComponent<CarController>();
 
     }
 
@@ -59,7 +60,7 @@ public class CarDriverAgent : Agent
     
    // }
 
-
+    
 
 
     // void MakeThingToSpawn ()
@@ -83,13 +84,16 @@ public class CarDriverAgent : Agent
     public override void OnEpisodeBegin()
     {
 
-        //   trackCheckpoints.ResetCheckpoint(transform);
-        //carDriver.Move(0f, 0f, 0f, 0f);
-        // MakeThingToSpawn();
 
-        this.CarAgent.angularVelocity = Vector3.zero;
-        this.CarAgent.velocity = Vector3.zero;
+        //   trackCheckpoints.ResetCheckpoint(transform);
+        
+        // MakeThingToSpawn();
+        
+
+        //this.CarAgent.angularVelocity = Vector3.zero;
+        //this.CarAgent.velocity = Vector3.zero;
         this.transform.position = new Vector3(-12.0f, 0f, 30f);
+        //carDriver.Move(0f, 0f, 0f, 0f);
 
 
 
@@ -99,14 +103,16 @@ public class CarDriverAgent : Agent
     {   //get obs from ray perception sensor.
         // float directionD = Vector3.Dot(transform.forward, checkpoint.transform.forward);
         // sensor.AddObservation(directionD);\
-
+        
     }
-
 
     public override void OnActionReceived(ActionBuffers actions)
     {
+        Debug.Log("MONKEEEEEEEEEEEEE");
+        //Debug.Log(actions.DiscreteActions[0]);
         float accel = 0f;
         float turn = 0f;
+
 
 
         switch (actions.DiscreteActions[0])
@@ -122,13 +128,23 @@ public class CarDriverAgent : Agent
             case 2: turn = -1f; break;
         }
 
+        Debug.Log(accel + turn);
+        if (accel == 1f)
+        {
+            carDriver.Move(turn, accel, 0f, 0f);
+        }
+        else {
+            carDriver.Move(turn, 0f, accel, 0f);
+        }
 
-        carDriver.Move(turn, accel, accel, 0f);
+            
 
     }
 
+
     public override void Heuristic(in ActionBuffers actionsOut)
     {
+        
         int forwardAction = 0;
         if (Input.GetKey(KeyCode.UpArrow)) forwardAction = 1;
         if (Input.GetKey(KeyCode.DownArrow)) forwardAction = 2;
@@ -152,6 +168,7 @@ public class CarDriverAgent : Agent
         {
             Debug.Log("HIT A WALL ONCE");
             AddReward(-0.5f);
+            EndEpisode();
             
         }
 
@@ -163,6 +180,7 @@ public class CarDriverAgent : Agent
         {
             Debug.Log("Keeps Hitting a wall");
             AddReward(-1f);
+            EndEpisode();
         }
 
     }
