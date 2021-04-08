@@ -1,0 +1,23 @@
+{
+    "CarDriver": {
+        "checkpoints": [
+            {
+                "steps": 3234,
+                "file_path": "results\\ppo\\CarDriver\\CarDriver-3234.onnx",
+                "reward": -123.5,
+                "creation_time": 1617887252.3748994
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3234,
+            "file_path": "results\\ppo\\CarDriver.onnx",
+            "reward": -123.5,
+            "creation_time": 1617887252.3748994
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.24.1",
+        "torch_version": "1.7.1+cu110"
+    }
+}

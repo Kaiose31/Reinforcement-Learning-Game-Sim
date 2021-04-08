@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1617866108",
+        "python_version": "3.7.10 (default, Feb 26 2021, 13:06:18) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Kaiose\\.conda\\envs\\unity_env\\Scripts\\mlagents-learn --run-id=ModelTest1",
+        "mlagents_version": "0.24.1",
+        "mlagents_envs_version": "0.24.1",
+        "communication_protocol_version": "1.4.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.20.1",
+        "end_time_seconds": "1617866146"
+    },
+    "total": 37.4442311,
+    "count": 1,
+    "self": 0.005324000000008766,
+    "children": {
+        "run_training.setup": {
+            "total": 0.1572791,
+            "count": 1,
+            "self": 0.1572791
+        },
+        "TrainerController.start_learning": {
+            "total": 37.281628,
+            "count": 1,
+            "self": 0.000663600000002873,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 37.2807326,
+                    "count": 1,
+                    "self": 37.2807326
+                },
+                "trainer_threads": {
+                    "total": 1.2999999938756446e-06,
+                    "count": 1,
+                    "self": 1.2999999938756446e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 0.0002305000000006885,
+                    "count": 1,
+                    "self": 0.0002305000000006885
+                }
+            }
+        }
+    }
+}

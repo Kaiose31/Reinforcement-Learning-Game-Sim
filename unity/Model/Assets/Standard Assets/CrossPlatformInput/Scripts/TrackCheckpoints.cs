@@ -24,6 +24,7 @@ public class TrackCheckpoints : MonoBehaviour
             Debug.Log("Correct");
             nextCheckpointSIndex = (nextCheckpointSIndex +1 )% checkpointSList.Count;
 
+            //GO to CarDriverAgent and enter a +reward.
         }
         else {
 
