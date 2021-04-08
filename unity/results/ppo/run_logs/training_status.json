@@ -2,17 +2,17 @@
     "CarDriver": {
         "checkpoints": [
             {
-                "steps": 2624,
-                "file_path": "results\\ppo\\CarDriver\\CarDriver-2624.onnx",
-                "reward": null,
-                "creation_time": 1617871966.7264168
+                "steps": 3234,
+                "file_path": "results\\ppo\\CarDriver\\CarDriver-3234.onnx",
+                "reward": -123.5,
+                "creation_time": 1617887252.3748994
             }
         ],
         "final_checkpoint": {
-            "steps": 2624,
+            "steps": 3234,
             "file_path": "results\\ppo\\CarDriver.onnx",
-            "reward": null,
-            "creation_time": 1617871966.7264168
+            "reward": -123.5,
+            "creation_time": 1617887252.3748994
         }
     },
     "metadata": {
