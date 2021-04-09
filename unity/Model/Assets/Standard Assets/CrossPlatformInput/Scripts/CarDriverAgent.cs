@@ -42,8 +42,8 @@ public class CarDriverAgent : Agent
     void OnTriggerEnter(Collider other)
     {
             Debug.Log("HIT A Checkpoint");
-            AddReward(+1f);
-            EndEpisode();
+            AddReward(+2f);
+            //EndEpisode();
     }
 
     //Need to make a function for checkpoint pos reward.
@@ -95,8 +95,8 @@ public class CarDriverAgent : Agent
      
         float accel = actions.ContinuousActions[0];
         float turn = actions.ContinuousActions[1];
-
-        carDriver.Move(turn, accel, accel, 0);
+        //float handb = actions.ContinuousActions[2];
+        carDriver.Move(turn, accel, accel, 0f);
 
     }
 
@@ -106,7 +106,7 @@ public class CarDriverAgent : Agent
         ActionSegment<float> continuousActions = actionsOut.ContinuousActions;
         continuousActions[0] = Input.GetAxis("Vertical");
         continuousActions[1] = Input.GetAxis("Horizontal");
-
+       // continuousActions[2] = Input.GetAxis("Jump");
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -116,7 +116,7 @@ public class CarDriverAgent : Agent
         {
             Debug.Log("HIT A WALL ONCE");
             AddReward(-0.5f);
-            EndEpisode();
+            //EndEpisode();
             
         }
 
@@ -127,8 +127,8 @@ public class CarDriverAgent : Agent
         if (collision.gameObject.tag == "Obstacle")
         {
             Debug.Log("Keeps Hitting a wall");
-            AddReward(-0.01f);
-            EndEpisode();
+            AddReward(-0.5f);
+            //EndEpisode();
         }
 
     }
