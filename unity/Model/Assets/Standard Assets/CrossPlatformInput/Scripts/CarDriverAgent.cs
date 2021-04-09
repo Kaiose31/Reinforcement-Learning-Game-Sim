@@ -9,7 +9,7 @@ using UnityStandardAssets.Vehicles.Car;
 public class CarDriverAgent : Agent
 {
     // [SerializeField] private TrackCheckpoints trackCheckpoints;
-    
+   
     //public float xMinRange = -12.0f;
     //public float xMaxRange = -12.0f;
     //public float yMinRange = 0.0f;
@@ -18,40 +18,42 @@ public class CarDriverAgent : Agent
     //public float zMaxRange = 30.0f;
 
     //public Transform target;
-
+    public int correctCheckpoint=0;
     //public GameObject[] spawnObjects; // what prefabs to spawn,here car.
-
-    private CarController carDriver;
     
-    GameObject  CarAgent;
-    //Rigidbody CarAgent;
+    private CarController carDriver;
+    //GameObject  CarAgent;
     private void Awake()
     {
         carDriver = GetComponent<CarController>();
-
+        
 
     }
 
     private void start()
     {
         //CarAgent = GameObject.FindGameObjectWithTag("Player");
-        
+     
 
     }
 
     void OnTriggerEnter(Collider other)
     {
+        
             Debug.Log("HIT A Checkpoint");
-            AddReward(+2f);
+            AddReward(+1f);
+        
+       
             //EndEpisode();
     }
 
     //Need to make a function for checkpoint pos reward.
-   // void hitCheckpoint() { 
-    
-   // }
+    void hitCheckpoint()
+    {
 
-    
+    }
+
+
 
 
     // void MakeThingToSpawn ()
@@ -74,13 +76,13 @@ public class CarDriverAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        //   trackCheckpoints.ResetCheckpoint(transform);
-        // MakeThingToSpawn();
-        //this.CarAgent.angularVelocity = Vector3.zero;
-        //this.CarAgent.velocity = Vector3.zero;
-        this.transform.position = new Vector3(-12.0f, 0f, 30f);
-        
-
+        Quaternion SpawnAngle = Quaternion.Euler(0, 90, 0);
+        this.transform.position = new Vector3(Random.Range(-12f,-2f),-2f,Random.Range(21f,31f));
+        this.transform.rotation = SpawnAngle;
+        Rigidbody CarAgent;
+        CarAgent = this.GetComponent<Rigidbody>();
+        CarAgent.angularVelocity = Vector3.zero;
+        CarAgent.velocity = Vector3.zero;
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -92,7 +94,7 @@ public class CarDriverAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-     
+        //Debug.Log(actions.ContinuousActions[0]);
         float accel = actions.ContinuousActions[0];
         float turn = actions.ContinuousActions[1];
         //float handb = actions.ContinuousActions[2];
@@ -103,6 +105,7 @@ public class CarDriverAgent : Agent
 
     public override void Heuristic(in ActionBuffers actionsOut)
     { 
+        
         ActionSegment<float> continuousActions = actionsOut.ContinuousActions;
         continuousActions[0] = Input.GetAxis("Vertical");
         continuousActions[1] = Input.GetAxis("Horizontal");
@@ -127,7 +130,7 @@ public class CarDriverAgent : Agent
         if (collision.gameObject.tag == "Obstacle")
         {
             Debug.Log("Keeps Hitting a wall");
-            AddReward(-0.5f);
+            AddReward(-0.0001f);
             //EndEpisode();
         }
 

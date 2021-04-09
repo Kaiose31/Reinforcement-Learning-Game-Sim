@@ -1,18 +1,24 @@
 {
-    "CarDriver": {
+    "Driver1": {
         "checkpoints": [
             {
-                "steps": 3234,
-                "file_path": "results\\ppo\\CarDriver\\CarDriver-3234.onnx",
-                "reward": -123.5,
-                "creation_time": 1617887252.3748994
+                "steps": 499978,
+                "file_path": "results\\ppo\\Driver1\\Driver1-499978.onnx",
+                "reward": 1.7,
+                "creation_time": 1617976561.3187494
+            },
+            {
+                "steps": 500042,
+                "file_path": "results\\ppo\\Driver1\\Driver1-500042.onnx",
+                "reward": 1.7,
+                "creation_time": 1617976561.4744124
             }
         ],
         "final_checkpoint": {
-            "steps": 3234,
-            "file_path": "results\\ppo\\CarDriver.onnx",
-            "reward": -123.5,
-            "creation_time": 1617887252.3748994
+            "steps": 500042,
+            "file_path": "results\\ppo\\Driver1.onnx",
+            "reward": 1.7,
+            "creation_time": 1617976561.4744124
         }
     },
     "metadata": {

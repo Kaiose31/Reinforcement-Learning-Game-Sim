@@ -6,6 +6,7 @@ public class TrackCheckpoints : MonoBehaviour
 {
     private List<CheckpointS> checkpointSList;
     private int nextCheckpointSIndex;
+    public CarDriverAgent carDriverAgent;
     private void Awake() {
         Transform checkpointsTransform = transform.Find("Checkpoints");
         checkpointSList = new List<CheckpointS>();
@@ -19,17 +20,22 @@ public class TrackCheckpoints : MonoBehaviour
 
     public void PlayerThroughCheckpoint(CheckpointS checkpointS) {
         //  Debug.Log(checkpointS.transform.name);
-        if (checkpointSList.IndexOf(checkpointS) == nextCheckpointSIndex)
+        if (checkpointSList.IndexOf(checkpointS) == nextCheckpointSIndex )
         {
             Debug.Log("Correct");
+           
+            
             nextCheckpointSIndex = (nextCheckpointSIndex +1 )% checkpointSList.Count;
 
+
             //GO to CarDriverAgent and enter a +reward.
+            
+
         }
         else {
 
             Debug.Log("wrong");
-
+            
         }
 
 
