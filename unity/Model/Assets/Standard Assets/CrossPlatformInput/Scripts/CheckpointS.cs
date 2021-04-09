@@ -12,20 +12,12 @@ public class CheckpointS : MonoBehaviour
         
     }
 
-    public void Update() { }
-    
-    
     void OnTriggerEnter(Collider other)
     {
         if (isColliding) return;
         isColliding = true;
-        if (Chassis)
-        {
-            //Debug.Log("PASSED ");
-
-            trackCheckpoints.PlayerThroughCheckpoint(this);
-        }
-
+        trackCheckpoints.PlayerThroughCheckpoint(this);
+    
     }
 
     public void SetTrackCheckpoints(TrackCheckpoints trackCheckpoints) {
