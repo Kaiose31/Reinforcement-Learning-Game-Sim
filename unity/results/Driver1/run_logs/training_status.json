@@ -1,0 +1,23 @@
+{
+    "Driver1": {
+        "checkpoints": [
+            {
+                "steps": 127150,
+                "file_path": "results\\Driver1\\Driver1\\Driver1-127150.onnx",
+                "reward": -80.25,
+                "creation_time": 1617958723.9415312
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 127150,
+            "file_path": "results\\Driver1\\Driver1.onnx",
+            "reward": -80.25,
+            "creation_time": 1617958723.9415312
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.24.1",
+        "torch_version": "1.7.1+cu110"
+    }
+}

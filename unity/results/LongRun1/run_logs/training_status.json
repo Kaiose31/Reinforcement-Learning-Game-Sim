@@ -1,0 +1,29 @@
+{
+    "CarDriver": {
+        "checkpoints": [
+            {
+                "steps": 499983,
+                "file_path": "results\\LongRun1\\CarDriver\\CarDriver-499983.onnx",
+                "reward": null,
+                "creation_time": 1617938902.7181685
+            },
+            {
+                "steps": 575453,
+                "file_path": "results\\LongRun1\\CarDriver\\CarDriver-575453.onnx",
+                "reward": null,
+                "creation_time": 1617940468.6706946
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 575453,
+            "file_path": "results\\LongRun1\\CarDriver.onnx",
+            "reward": null,
+            "creation_time": 1617940468.6706946
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.24.1",
+        "torch_version": "1.7.1+cu110"
+    }
+}
