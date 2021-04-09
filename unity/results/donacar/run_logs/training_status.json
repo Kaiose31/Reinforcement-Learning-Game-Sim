@@ -1,0 +1,23 @@
+{
+    "Driver1": {
+        "checkpoints": [
+            {
+                "steps": 68950,
+                "file_path": "results\\donacar\\Driver1\\Driver1-68950.onnx",
+                "reward": -136.0,
+                "creation_time": 1617961585.385533
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 68950,
+            "file_path": "results\\donacar\\Driver1.onnx",
+            "reward": -136.0,
+            "creation_time": 1617961585.385533
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.24.1",
+        "torch_version": "1.7.1+cu110"
+    }
+}
