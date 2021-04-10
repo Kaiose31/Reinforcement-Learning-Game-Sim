@@ -63,4 +63,5 @@ def main():
         pygame.display.update()
         clock.tick(300)
 
-main()
+if __name__=="__main__":
+    main()
