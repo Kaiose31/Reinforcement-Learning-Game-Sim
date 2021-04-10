@@ -1,0 +1,47 @@
+{
+    "Driver1": {
+        "checkpoints": [
+            {
+                "steps": 2235397,
+                "file_path": "results\\train1\\Driver1\\Driver1-2235397.onnx",
+                "reward": 4.346153846153846,
+                "creation_time": 1618006979.538721
+            },
+            {
+                "steps": 2499950,
+                "file_path": "results\\train1\\Driver1\\Driver1-2499950.onnx",
+                "reward": -0.5,
+                "creation_time": 1618009122.219425
+            },
+            {
+                "steps": 2999937,
+                "file_path": "results\\train1\\Driver1\\Driver1-2999937.onnx",
+                "reward": -0.5,
+                "creation_time": 1618012066.7511563
+            },
+            {
+                "steps": 3499981,
+                "file_path": "results\\train1\\Driver1\\Driver1-3499981.onnx",
+                "reward": 2.5,
+                "creation_time": 1618014839.625592
+            },
+            {
+                "steps": 3768571,
+                "file_path": "results\\train1\\Driver1\\Driver1-3768571.onnx",
+                "reward": 0.0,
+                "creation_time": 1618016653.2391603
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3768571,
+            "file_path": "results\\train1\\Driver1.onnx",
+            "reward": 0.0,
+            "creation_time": 1618016653.2391603
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.24.1",
+        "torch_version": "1.7.1+cu110"
+    }
+}

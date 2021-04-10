@@ -50,7 +50,7 @@ public class CarDriverAgent : Agent
     //Need to make a function for checkpoint pos reward.
     void hitCheckpoint()
     {
-
+        //empty
     }
 
 
@@ -77,7 +77,7 @@ public class CarDriverAgent : Agent
     public override void OnEpisodeBegin()
     {
         Quaternion SpawnAngle = Quaternion.Euler(0, 90, 0);
-        this.transform.position = new Vector3(Random.Range(-12f,-2f),-2f,Random.Range(21f,31f));
+        this.transform.localPosition = new Vector3(Random.Range(-12f,-2f)-434.5f,-2f-215.5f,Random.Range(21f,31f));
         this.transform.rotation = SpawnAngle;
         Rigidbody CarAgent;
         CarAgent = this.GetComponent<Rigidbody>();
@@ -119,7 +119,7 @@ public class CarDriverAgent : Agent
         {
             Debug.Log("HIT A WALL ONCE");
             AddReward(-0.5f);
-            //EndEpisode();
+            EndEpisode();
             
         }
 
