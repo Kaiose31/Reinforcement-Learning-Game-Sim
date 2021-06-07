@@ -10,7 +10,7 @@ Project Modules:
 
 # 2. RL
     DDPG 
-    DQN 
+    PPO 
     Unity ML agents api   - DONE 
   
     
